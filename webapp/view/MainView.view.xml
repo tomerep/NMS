@@ -1,0 +1,180 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.axians.novofermMobil.controller.MainView" xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Page showHeader="true" title="{i18n>appTitle}" showSubHeader="{appConfModel>/isDebugMode}"
+		showFooter="{= ${equipmentDetailsModel>/isValid} }" navButtonPress="handlePageNavBackButtonPress">
+		<headerContent>
+			<Image src="/resources/novoferm_logo.png" height="auto" width="80px" densityAware="false"/>
+			<!-- <Button text="" type="Default" icon="sap-icon://sys-help" iconFirst="true" width="auto"
+					iconDensityAware="false" press="handleShowHelpButtonPressed"/>
+			<Button text="" type="Default" icon="sap-icon://list" iconFirst="true" width="auto" visible="{permissionsModel>/list_orders}" iconDensityAware="false"
+					press="handleOrderListButtonPressed"/>
+			<Button text="" type="Default" icon="sap-icon://synchronize" iconFirst="true" width="auto" visible="{appConfModel>/views/showSyncButton}"
+					enabled="{= !${appConfModel>/isSubmitLocked} &amp;&amp; ${appConfModel>/isAppOnline} }"
+					iconDensityAware="false" press="handleSyncButtonPressed"/>
+			<Button text="" type="Default" icon="sap-icon://person-placeholder" iconFirst="true" width="auto" visible="{= ${appConfModel>/user/isAuthenticated} === false }"
+					iconDensityAware="false" press="handleLogonButtonPressed"/> -->
+			<Button text="" type="Default" icon="sap-icon://menu2" visible="{= !${equipmentDetailsModel>/isValid} }" iconFirst="true" width="auto"
+				iconDensityAware="false" press="openMenu"/>
+		</headerContent>
+		<subHeader>
+			<Toolbar>
+				<content>
+					<Text text="User: {appConfModel>/user/name} Rolle: {appConfModel>/user/role}"/>
+				</content>
+			</Toolbar>
+		</subHeader>
+		<content>
+			<!-- no equi data -->
+			<core:Fragment fragmentName="com.sap.build.axians.novofermMobil.view.fragments.NoEquiDetailsMessagePane" type="XML"/>
+			<form:Form width="100%" editable="false" visible="{= !!${equipmentDetailsModel>/isValid} }">
+				<form:toolbar>
+					<Toolbar>
+						<Title text="{i18n>label.serialnumber} {equipmentDetailsModel>/data/EquipmentId}" level="H3"/>
+						<ToolbarSpacer/>
+						<Button text="{i18n>label.select.new.door}" press="selectEquiBackend" type="Emphasized" visible="{SELECTDOOR>/selectDoor}"/>
+					</Toolbar>
+				</form:toolbar>
+				<!-- <form:title>
+					<core:Title text="{i18n>label.serialnumber} {equipmentDetailsModel>/data/EquipmentId}" level="Auto" icon="sap-icon://windows-doors"/>
+					<Button text="Text"/>
+				</form:title> -->
+				<form:formContainers>
+					<!-- confirmation data -->
+					<form:FormContainer visible="{appConfModel>/views/showConfirmations}" formElements="{orderPosOperationsModel>/}" expandable="true" expanded="true">
+						<form:title>
+							<core:Title text="{i18n>confirmation.title}" level="Auto" icon="sap-icon://activity-2"/>
+						</form:title>
+						<form:formElements>
+							<form:FormElement>
+								<form:label/>
+								<form:fields>
+									<Panel expandable="true">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="{orderPosOperationsModel>ServiceType/Text}"/>
+												<ToolbarSpacer/>
+												<CheckBox selected="{path: 'orderPosOperationsModel>OrderPositionConfirmationSet', formatter: '.isConfirmationConfirmed'}"
+													valueState="{= ${orderPosOperationsModel>metaData/isChanged} ? 'Warning' : 'None'}" select="handleConfirmationCBSelectChanged"/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<Text
+												text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat"/>
+										</content>
+									</Panel>
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+					</form:FormContainer>
+					<!-- display equi data -->
+					<core:Fragment fragmentName="com.sap.build.axians.novofermMobil.view.fragments.equipment.EquiDetailsFormContainer" type="XML"/>
+					<!-- documents -->
+					<form:FormContainer visible="{permissionsModel>/document_read}" expandable="true" expanded="true">
+						<form:title>
+							<core:Title text="Dokumente (Mock-Daten)" level="Auto" icon="sap-icon://pdf-attachment"/>
+						</form:title>
+						<form:formElements>
+							<form:FormElement>
+								<form:label>
+									<Label text="Leistungserklärung" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+								</form:label>
+								<form:fields>
+									<Link href="" text="Anzeigen" textAlign="Begin" width="auto" target="_blank" wrapping="false" emphasized="false" subtle="false"/>
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement>
+								<form:label>
+									<Label text="Montageanleitung" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+								</form:label>
+								<form:fields>
+									<Link href="" text="Anzeigen" textAlign="Begin" width="auto" target="_blank" wrapping="false" emphasized="false" subtle="false"/>
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement>
+								<form:label>
+									<Label text="Zulassung" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+								</form:label>
+								<form:fields>
+									<Link href="" text="Anzeigen" textAlign="Begin" width="auto" target="_blank" wrapping="false" emphasized="false" subtle="false"/>
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+					</form:FormContainer>
+					<!-- Bauleiter -->
+					<form:FormContainer visible="{= ${appConfModel>/views/showPartnerData} &amp;&amp; !${orderModel>/noOrder} }" expandable="true" expanded="true">
+						<form:title>
+							<core:Title text="{orderModel>/OrderBlPartner/Name}" level="Auto" icon="sap-icon://personnel-view"/>
+						</form:title>
+						<form:formElements>
+							<form:FormElement visible="{= !!${orderModel>/OrderBlPartner/LandLineDial} }">
+								<form:label>
+									<Label text="{i18n>label.phone}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+								</form:label>
+								<form:fields>
+									<Button text="{orderModel>/OrderBlPartner/LandLineDial}" press="handlePhoneCallPress" icon="sap-icon://call"/>
+									<!--<Link href="http://tel://{orderModel>/OrderBlPartner/LandLineDial}" text="{orderModel>/OrderBlPartner/LandLineDisplay}" textAlign="Begin" width="auto" target="_blank" wrapping="false" emphasized="false" subtle="false"/>-->
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement visible="{= !!${orderModel>/OrderBlPartner/MailAddress} }">
+								<form:label>
+									<Label text="{i18n>label.mail}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+								</form:label>
+								<form:fields>
+									<Link href="mailto:{orderModel>/OrderBlPartner/MailAddress}" text="{orderModel>/OrderBlPartner/MailAddress}" textAlign="Begin" width="auto"
+										target="_blank" wrapping="true" emphasized="false" subtle="false"/>
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+					</form:FormContainer>
+					<!-- MM -->
+					<form:FormContainer visible="{= ${appConfModel>/views/showPartnerData}  &amp;&amp; !${orderModel>/noOrder} }" expandable="true" expanded="true">
+						<form:title>
+							<core:Title text="{orderModel>/OrderSubPartner/Name}" level="Auto" icon="sap-icon://personnel-view"/>
+						</form:title>
+						<form:formElements>
+							<form:FormElement visible="{= !!${orderModel>/OrderSubPartner/LandLineDial} }">
+								<form:label>
+									<Label text="{i18n>label.phone}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+								</form:label>
+								<form:fields>
+									<Button text="{orderModel>/OrderSubPartner/LandLineDial}" press="handlePhoneCallPress" icon="sap-icon://call"/>
+									<!--<Link href="http://tel://+49691245478765" text="+49 (0) 69 1245478765" textAlign="Begin" width="auto" target="_blank" wrapping="false" emphasized="false" subtle="false"/>-->
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement visible="{= !!${orderModel>/OrderSubPartner/MailAddress} }">
+								<form:label>
+									<Label text="{i18n>label.mail}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+								</form:label>
+								<form:fields>
+									<Link href="mailto:{orderModel>/OrderSubPartner/MailAddress}" text="{orderModel>/OrderSubPartner/MailAddress}" textAlign="Begin" width="auto" target="_blank"
+										wrapping="true" emphasized="false" subtle="false"/>
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+					</form:FormContainer>
+				</form:formContainers>
+				<form:layout>
+					<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="2" labelSpanM="4" labelSpanS="4"/>
+				</form:layout>
+			</form:Form>
+		</content>
+		<footer>
+			<Bar design="Auto">
+				<contentLeft>
+					<Button text="{i18n>label.cancel}" type="Reject" press="handleCancelConfirmationPress" icon="sap-icon://sys-cancel" iconFirst="true"
+						width="auto" iconDensityAware="false"/>
+					<!-- <Button text="{i18n>label.scan}" type="Default" press="handleBarcodeScanPress" icon="sap-icon://bar-code" iconFirst="true" width="auto"
+							iconDensityAware="false"/>
+					<Button text="{i18n>label.manually}" type="Default" press="handleEquipmentSearchPress" icon="sap-icon://edit" iconFirst="true" width="auto"
+							iconDensityAware="false"/> -->
+				</contentLeft>
+				<contentMiddle/>
+				<contentRight>
+					<Button text="{i18n>label.send}" type="Accept" icon="sap-icon://upload-to-cloud" iconFirst="true" width="auto"
+						visible="{= ${appConfModel>/views/showSendDataButton} &amp;&amp; ${appConfModel>/hasLocalChanges} }" iconDensityAware="false"
+						press="handleSendDataButtonPressed"/>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

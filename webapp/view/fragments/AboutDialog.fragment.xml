@@ -1,0 +1,48 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:l="sap.ui.layout"
+        xmlns:core="sap.ui.core">
+    <Dialog
+            title="{i18n>about.title}"
+            icon="sap-icon://hint">
+        <content>
+        	<l:Grid>
+        		<l:content>
+					<Text text="BuildProfile: {AboutModel>/buildProfile}">
+						<layoutData>
+							<l:GridData
+								span="L12 M12 S12"
+								linebreakL="true"
+								linebreakM="true"
+								linebreakS="true" />
+						</layoutData>
+					</Text>
+					<Text text="Buildtime: {AboutModel>/buildTime}">
+						<layoutData>
+							<l:GridData
+								span="L12 M12 S12"
+								linebreakL="true"
+								linebreakM="true"
+								linebreakS="true" />
+						</layoutData>
+					</Text>
+					<Text text="Git Commithash: {AboutModel>/commit}">
+						<layoutData>
+							<l:GridData
+								span="L12 M12 S12"
+								linebreakL="true"
+								linebreakM="true"
+								linebreakS="true" />
+						</layoutData>
+					</Text>
+				</l:content>
+			</l:Grid>
+        </content>
+        <beginButton>
+            <Button
+                    text="{i18n>label.ok}"
+                    press="pressCloseAboutDialog">
+            </Button>
+        </beginButton>
+    </Dialog>
+</core:FragmentDefinition>

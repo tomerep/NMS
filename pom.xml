@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.sap.build.axians.novofermMobil</groupId>
+	<artifactId>nms-mp-nf-scanner-app</artifactId>
+	<packaging>pom</packaging>
+	<!-- Prefix used to identify correct version from grunt-version plugin increment task-->
+	<!--pomVersionTokenPrefix--><version>0.0.1</version>
+
+	<properties>
+		<nodejsVersion>v8.9.1</nodejsVersion>
+		<yarnpkgVersion>v1.5.1</yarnpkgVersion>
+		<!--Decrease turnaround times by skipping the download/installation of nodejs.
+			This parameter can be used in case the required node version, for the desired build profile, was already
+			provided by previous build executions.-->
+		<skipInstallNodeNpm>false</skipInstallNodeNpm>
+		<!--Decrease turnaround times by skipping the download/installation of defined dependencies from package.json file.
+			This parameter can be used in case the required node_modules, for the desired build profile, were already
+			provided by previous build executions.-->
+		<skipNpmInstall>false</skipNpmInstall>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>install node and yarn</id>
+						<goals>
+							<goal>install-node-and-yarn</goal>
+						</goals>
+						<phase>initialize</phase>
+						<configuration>
+							<skip>${skipInstallNodeNpm}</skip>
+							<nodeVersion>${nodejsVersion}</nodeVersion>
+							<yarnVersion>${yarnpkgVersion}</yarnVersion>
+						</configuration>
+					</execution>
+					<execution>
+						<id>yarn install</id>
+						<goals>
+							<goal>yarn</goal>
+						</goals>
+						<phase>initialize</phase>
+						<configuration>
+							<skip>${skipNpmInstall}</skip>
+							<arguments>install</arguments>
+							<arguments>--no-lockfile</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>executeGruntTask</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>grunt</goal>
+						</goals>
+						<configuration>
+							<arguments>${gruntTask}</arguments>
+							<environmentVariables>
+								<PATH>${project.basedir}/node/yarn/dist/bin${path.separator}${project.basedir}/node${path.separator}${project.basedir}/node_modules/.bin${path.separator}${env.PATH}</PATH>
+							</environmentVariables>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>cleanNodeAndModulesAndClientSources</id>
+						<!-- Execution is not bound to a lifecycle phase an must be triggered manually -->
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<skip>${maven.clean.skip}</skip>
+					<filesets>
+						<fileset>
+							<directory>node</directory>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+						<fileset>
+							<directory>node_modules</directory>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

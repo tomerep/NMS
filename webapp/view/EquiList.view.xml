@@ -1,0 +1,7 @@
+<mvc:View controllerName="com.sap.build.axians.novofermMobil.controller.EquiList"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns="sap.m">
+	<Page showHeader="true" title="{i18n>equi.list}" showFooter="true" showNavButton="true" navButtonPress="handlePageNavBackButtonPress">
+
+	</Page>
+</mvc:View>

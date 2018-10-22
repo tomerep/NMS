@@ -1,0 +1,20 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+
+	<Popover bounce="false" contentHeight="auto" contentWidth="100%" horizontalScrolling="false" modal="true" offsetX="0" offsetY="0"
+		placement="Auto" showHeader="true" title="{i18n>equi.configuration}" verticalScrolling="true" >
+		<content>
+			<FormattedText htmlText="&lt;ul>&lt;li>Coffee&lt;/li>&lt;li>Tea&lt;/li>&lt;li>Milk&lt;/li>&lt;/ul>" width="0px" height="0pt" />
+			<Image src="/resources/2018-05-14_12h04_12.png" height="320px" width="320px"  densityAware="false"/>
+		</content>
+		<beginButton/>
+		<customHeader/>
+		<endButton>
+			<Button text="{i18n>label.ok}" type="Default" press="handleOkButtonPressed"/>
+		</endButton>
+		<footer/>
+		<subHeader/>
+	</Popover>
+
+</core:FragmentDefinition>

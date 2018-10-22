@@ -1,0 +1,23 @@
+[{
+	"__metadata": {
+		"id": "http://172.16.3.10:8000/sap/opu/odata/sap/Z_MOB_DATA_EXCHG_SRV/BackendCodeSet(BackendFk='E01',Counter='1')",
+		"uri": "http://172.16.3.10:8000/sap/opu/odata/sap/Z_MOB_DATA_EXCHG_SRV/BackendCodeSet(BackendFk='E01',Counter='1')",
+		"type": "Z_MOB_DATA_EXCHG_SRV.BackendCode"
+	},
+	"BackendFk": "E01",
+	"Counter": 1,
+	"TypeOfId": "QR_CODE",
+	"Prefix": "ABC",
+	"Suffix": "Z"
+}, {
+	"__metadata": {
+		"id": "http://172.16.3.10:8000/sap/opu/odata/sap/Z_MOB_DATA_EXCHG_SRV/BackendCodeSet(BackendFk='E01',Counter='2')",
+		"uri": "http://172.16.3.10:8000/sap/opu/odata/sap/Z_MOB_DATA_EXCHG_SRV/BackendCodeSet(BackendFk='E01',Counter='2')",
+		"type": "Z_MOB_DATA_EXCHG_SRV.BackendCode"
+	},
+	"BackendFk": "E01",
+	"Counter": 2,
+	"TypeOfId": "CODE_39",
+	"Prefix": "ABC",
+	"Suffix": "Z"
+}]

@@ -1,0 +1,35 @@
+{
+	"ios": {
+		"debug": {
+		    "automaticProvisioning": true,
+			"codeSignIdentity": "iPhone Developer",
+			"developmentTeam": "QDU5JWSX87",
+			"packageType": "development"
+		},
+		"release": {
+		    "automaticProvisioning": true,
+			"codeSignIdentity": "iPhone Developer",
+			"developmentTeam": "QDU5JWSX87",
+			"packageType": "enterprise"
+		}
+	},
+	"windows": {
+		"debug": {
+			"publisherId": "CN=NMSMPWindows, OU=IT Solutions, O=Axians, C=DE"
+		},
+		"release": {
+			"packageCertificateKeyFile": ".\\certificate\\windows\\NMSMPWindows.pfx",
+			"packageThumbprint": "B91D9FC220DB26DF57BE5CFD032ABD7B182A05D2",
+			"publisherId": "CN=NMSMPWindows, OU=IT Solutions, O=Axians, C=DE"
+		}
+	},
+	"android": {
+		"release": {
+			"keystore": "./certificate/android/NMSMPAndroid",
+			"storePassword": "morpheus",
+			"alias": "NMSMP",
+			"password": "morpheus",
+			"keystoreType": ""
+		}
+	}
+}

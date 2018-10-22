@@ -1,0 +1,103 @@
+{
+	"dataBinding": {
+		"/webapp/view/OrderList.view.xml": {
+			"entitySet": ""
+		}
+	},
+	"build": {
+		"targetFolder": "dist",
+		"sourceFolder": "webapp",
+		"buildRequired": true
+	},
+	"hybrid": {
+		"backendDestination": "ED1",
+		"hatVersion": "1.26.4",
+		"appNamespace": "com.axians.itsolutions.ui5.eam.client",
+		"oDataConfigs": [
+			{
+				"hybridOdata": {
+					"name": "mainService",
+					"serviceUrl": "https://mobile-a386d16c3.hana.ondemand.com:443/com.axians.itsolutions.ui5.eam.client/"
+				},
+				"originOdata": {
+					"name": "mainService",
+					"serviceUrl": "/sap/opu/odata/neo/eam_srv/"
+				},
+				"oDataType": "smpodata"
+			}
+		],
+		"platform": {
+			"ios": {
+				"selected": false,
+				"preferences": {
+					"Fullscreen": false,
+					"Orientation": "all",
+					"EnableViewportScale": false,
+					"UrlScheme": ""
+				}
+			},
+			"android": {
+				"selected": true,
+				"preferences": {
+					"Fullscreen": false,
+					"Orientation": "default",
+					"ShowTitle": false,
+					"LogLevel": "VERBOSE",
+					"LoadUrlTimeout": "80000",
+					"UrlScheme": ""
+				}
+			},
+			"windows": {
+				"selected": false,
+				"preferences": {
+					"Fullscreen": false,
+					"Orientation": "default",
+					"ShowTitle": false,
+					"LogLevel": ""
+				},
+				"preferencesWin10": {
+					"Fullscreen": false,
+					"Orientation": "default",
+					"ShowTitle": false,
+					"LogLevel": ""
+				}
+			}
+		},
+		"plugins": {
+			"cordova": {
+				"customconfig": {
+					"selected": true,
+					"registry": "cordova-custom-config",
+					"localBuild": true
+				},
+				"android-gradle-support": {
+					"selected": true,
+					"registry": "cordova-android-support-gradle-release",
+					"localBuild": true
+				},
+				"barcodescanner": {
+					"selected": true,
+					"registry": "cordova-plugin-barcodescanner",
+					"localBuild": true
+				},
+				"splashscreen": {
+					"selected": true,
+					"registry": "cordova-plugin-splashscreen",
+					"localBuild": true
+				},
+				"callNumber": {
+					"selected": true,
+					"registry": "cordova-plugin-call-number",
+					"localBuild": true
+				},
+				"camera": {
+					"selected": true,
+					"registry": "cordova-plugin-camera",
+					"localBuild": true
+				}
+			},
+			"kapsel": {},
+			"custom": {}
+		}
+	}
+}

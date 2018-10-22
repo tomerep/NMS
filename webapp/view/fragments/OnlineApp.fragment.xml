@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog horizontalScrolling="false" stretch="true" title="OnlineApp" type="Standard" verticalScrolling="false" contentHeight="100%">
+		<content>
+			<core:HTML content="{onlineAppModel>/html}"/>
+		</content>
+		<beginButton/>
+		<buttons>
+			<Button text="{i18n>label.cancel}" type="Default" iconFirst="true" width="auto" iconDensityAware="false" press="handleOnlineAppCancelPressed"/>
+		</buttons>
+		<customHeader/>
+		<endButton/>
+		<subHeader/>
+	</Dialog>
+</core:FragmentDefinition>

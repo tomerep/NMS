@@ -1,0 +1,59 @@
+{
+	"welcomeFile": "webapp/index.html",
+	"routes": [
+	{
+		"path": "/webapp/resources/com/axians/itsolutions/ui5/nmsmp/utils",
+		"target": {
+			"type": "application",
+			"name": "nmsmplibrariesutil", 
+			"entryPath": "/com/axians/itsolutions/ui5/nmsmp/utils"
+		},
+		"description": "nms-mp-libraries-util"
+	}
+	,
+	{
+		"path": "/webapp/resources/com/axians/itsolutions/ui5/nmsmp/libraries/core",
+		"target": {
+			"type": "application",
+			"name": "nmsmplibrariescore", 
+			"entryPath": "/com/axians/itsolutions/ui5/nmsmp/libraries/core"
+		},
+		"description": "nms-mp-libraries-core"
+	}
+	,
+	{
+		"path": "/webapp/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"version": "1.52.20",
+			"preferLocal": true,
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}
+	,
+	{
+		"path": "/webapp/test-resources",
+		"target": {
+			"type": "service",
+			"version": "1.52.20",
+			"name": "sapui5",
+			"entryPath": "/test-resources"
+		},
+		"description": "SAPUI5 Test Resources"
+	}
+	,
+    {
+      "path": "/com/axians/itsolutions/ui5/novoferm/database",
+      "target": {
+        "type": "destination",
+        "name": "nf-hana-service",
+        "entryPath": "/com/axians/itsolutions/ui5/novoferm/database"
+      },
+      "description": "nf-hana-service"
+    }
+    ],
+	"authenticationMethod": "none",
+	"sendWelcomeFileRedirect": true
+}

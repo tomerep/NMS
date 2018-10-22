@@ -1,0 +1,155 @@
+[{
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='add_addorder')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "add_addorder"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='app_impersonation')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "app_impersonation"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='cancel_any_confirmation')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "cancel_any_confirmation"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='cancel_any_confirmation_ai')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "cancel_any_confirmation_ai"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='confirm_any_order')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "confirm_any_order"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='confirm_any_order_ai')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "confirm_any_order_ai"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='document_read')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "document_read"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='list_orders')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "list_orders"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_any_confirmation')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_any_confirmation"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_any_confirmation_ai')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_any_confirmation_ai"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_configuration')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_configuration"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_last_service_any')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_last_service_any"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_legal_dates')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_legal_dates"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_order_by_equipment')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_order_by_equipment"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_order_by_id')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_order_by_id"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_partner_MFC')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_partner_MFC"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_partner_MM')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_partner_MM"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_partner_ai_MFC')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_partner_ai_MFC"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_partner_ai_MM')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_partner_ai_MM"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='read_warrenty_end_ai')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "read_warrenty_end_ai"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='use_browser')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "use_browser"
+}, {
+	"__metadata": {
+		"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.AuthorizationType",
+		"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Authorization(UserId='S0019258617',Authorization='view_order_detail')"
+	},
+	"UserId": "S0019258617",
+	"Authorization": "view_order_detail"
+}]

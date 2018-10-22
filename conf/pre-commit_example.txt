@@ -1,0 +1,14 @@
+#!C:\neo\ext\git21103\usr\bin\sh.exe
+export PATH=$PATH:./node
+
+if which node >/dev/null; then
+    ROOT_DIR=$(git rev-parse --show-toplevel)
+	ESLINTHOME="${ROOT_DIR}/node_modules/.bin"
+	ESLINTCMD="${ESLINTHOME}/eslint ${ROOT_DIR}/webapp/"
+	eval $ESLINTCMD
+	exit $?
+
+else
+    echo !!!Cannot find local node please run e.g.: mvn package -DgruntTask=eslint
+	exit 1
+fi

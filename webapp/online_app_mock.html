@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+
+	<title>nf-online-app-mock</title>
+</head>
+
+<body id="content" style="background-color: #ffffff;">
+
+<div id="out"></div>
+
+<script>
+
+	var targetOrigin = window.origin; // so nicht in der Offline App!!!!
+
+	window.addEventListener("message", receiveMessage, false);
+
+	function receiveMessage(oEvent) {
+		document.getElementById("out").innerHTML = "";
+		if (oEvent.origin === targetOrigin) {
+			//document.getElementById("out").innerHTML = "";
+			console.log(JSON.stringify(oEvent.data));
+			if (oEvent.data.msgType) {
+				switch (oEvent.data.msgType) {
+					case "DO_LOGIN":
+						document.getElementById("out").innerHTML = "You are loggedin!";
+						window.parent.postMessage({
+								msgType: "LOGIN_SUCCESSFUL"
+						}, targetOrigin);
+						window.parent.postMessage({
+								msgType: "USER_DATA",
+								userName: "Alechseij",
+								userRole: "nfad"
+						}, targetOrigin);
+						break;
+					case "DO_SYNC":
+						document.getElementById("out").innerHTML = "Synchronizing!";
+						loadJSON("localService/mockdata/CustomerOrderSet.json", function(oData) {
+							// send each order seperately
+							for (var i in oData) {
+								window.parent.postMessage({
+										msgType: "ORDER_DATA",
+					                    data: oData[i]
+								}, targetOrigin);
+							}
+							finish("DO_SYNC");
+						});
+						break;
+					case "EQUI_DATA":
+						document.getElementById("out").innerHTML = "Sending equipment: " + oEvent.data.equipmentId;
+						loadJSON("localService/mockdata/EquipmentSet.json", function(oData) {
+							window.parent.postMessage({
+									msgType: "EQUI_DATA",
+				                    data: oData.filter(function(oEqui){
+				                    	return oEqui.EquipmentId === oEvent.data.equipmentId;
+				                    })
+							}, targetOrigin);
+							finish("EQUI_DATA");
+						});
+						break;
+					case "CONFIRMATION_DATA":
+						document.getElementById("out").innerHTML = "Sending confirmations!";
+						for (var i in oEvent.data.data) {
+							var oConfirmation = oEvent.data.data[i];
+							window.parent.postMessage({
+								msgType: "CONFIRMATION_SEND",
+								data: oConfirmation
+								/*
+								,
+								errorOccured: true,
+								errorMsg: "Fehler beim Senden einer Rückmeldung!"
+								//*/
+							}, targetOrigin);
+						}
+						finish("CONFIRMATION_DATA");
+						break;
+					case "PERMISSION_DATA":
+						document.getElementById("out").innerHTML = "Reading permissions!";
+						loadJSON("localService/mockdata/AuthorizationSet.json", function(oData) {
+							// respond with sample data (nfad)
+							window.parent.postMessage({
+									msgType: "PERMISSION_DATA",
+				                    data: oData
+							}, targetOrigin);
+							finish("PERMISSION_DATA");
+						});
+						break;
+					default:
+						console.log("OnlineAppMock._receiveMessage: received unknown message " + oEvent.data.msgType);
+						break;
+				}
+			} else {
+				console.log("OnlineAppMock._receiveMessage: received message without 'msgType'");
+			}
+		}
+	}
+	
+	function finish(sOperation, bErrorOccured, sErrorMsg) {
+		window.parent.postMessage({
+				msgType: "OPERATION_FINSHED",
+				operationFinished: sOperation,
+				errorOccured: !!bErrorOccured,
+				errorMsg: sErrorMsg
+		}, targetOrigin);
+	}
+	
+	 function loadJSON(sPath, callback) {   
+	    var xobj = new XMLHttpRequest();
+	    xobj.overrideMimeType("application/json");
+	    xobj.open('GET', sPath, true);
+	    xobj.onreadystatechange = function () {
+	          if (xobj.readyState == 4 && xobj.status == "200") {
+	            callback(JSON.parse(xobj.responseText));
+	          }
+	    };
+	    xobj.send(null);  
+	 }
+	// tell offline app, that online app is ready
+	window.parent.postMessage({
+			msgType: "ONLINE_APP_LOADED"
+	}, targetOrigin);
+	
+</script>
+</body>
+
+</html>

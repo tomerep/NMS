@@ -1,0 +1,32 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>label.scan}"
+		visible="{= !${equipmentDetailsModel>/isValid} }" subheader="" press="handleBarcodeScanPress">
+		<TileContent>
+			<ImageContent src="sap-icon://bar-code" />
+		</TileContent>
+	</GenericTile>
+
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>label.manually}"
+		visible="{= !${equipmentDetailsModel>/isValid} }" subheader="" press="handleEquipmentSearchPress">
+		<TileContent>
+			<ImageContent src="sap-icon://edit" />
+		</TileContent>
+	</GenericTile>
+
+	<!-- deactivated until cr 'show orderlist' is approved -->
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>order.list}"
+		visible="{= false &amp;&amp; !${equipmentDetailsModel>/isValid} &amp;&amp; ${permissionsModel>/list_orders} }" subheader="" press="press">
+		<TileContent>
+			<ImageContent src="sap-icon://list" />
+		</TileContent>
+	</GenericTile>
+	<!-- <MessagePage showHeader="false"
+				 visible="{= !${equipmentDetailsModel>/isValid} }"
+				 text="{i18n>label.welcome}"
+				 description="{i18n>equi.msg.scanOrEnter}"
+				 icon="sap-icon://message-information">
+	</MessagePage> -->
+
+</core:FragmentDefinition>

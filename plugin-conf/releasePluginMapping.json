@@ -1,0 +1,8 @@
+{
+	"cordova": {
+	},
+	"kapsel": [
+		"kapsel-plugin-encryptedstorage"
+	],
+	"custom": []
+}

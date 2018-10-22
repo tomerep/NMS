@@ -1,0 +1,43 @@
+<mvc:View controllerName="com.sap.build.axians.novofermMobil.controller.OrderList"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns="sap.m">
+	<Page showHeader="true" title="{i18n>order.list}" showFooter="true" showNavButton="true" navButtonPress="handlePageNavBackButtonPress">
+		<content>
+			<List id="orderListId"
+				  items="{path: 'orderListModel>/results', templateShareable: true }"
+				  width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true"
+				  itemPress="handleOrderListItemPressed"
+				  growingThreshold="20" growingScrollToLoad="true">
+				<headerToolbar>
+					<Toolbar width="" design="Solid">
+						<content>
+							<SearchField placeholder="{i18n>label.search}" showSearchButton="false" width="100%" liveChange="handleSearchOrderLiveChange"/>
+						</content>
+					</Toolbar>
+				</headerToolbar>
+				<items>
+					<ObjectListItem intro="" title="{orderListModel>OrderId}" numberState="None" type="Navigation" selected="true"
+									showMarkers="false">
+						<attributes/>
+						<firstStatus/>
+						<secondStatus/>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Bar design="Auto">
+				<contentLeft/>
+				<contentMiddle/>
+				<contentRight/>
+			</Bar>
+		</footer>
+		<headerContent>
+			<Image src="/resources/novoferm_logo.png" height="auto" width="100px" densityAware="false"/>
+			<Button text="" type="Default" icon="sap-icon://add" iconFirst="true" width="auto" visible="{permissionsModel>/add_addorder}" iconDensityAware="false"
+					press="handleAddOrderButtonPressed"/>
+		</headerContent>
+		<subHeader/>
+		<customHeader/>
+	</Page>
+</mvc:View>

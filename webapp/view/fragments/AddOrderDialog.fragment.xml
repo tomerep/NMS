@@ -1,0 +1,23 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+
+	<Dialog horizontalScrolling="false" showHeader="true" state="None" stretch="false" title="{i18n>order.add}" type="Standard" verticalScrolling="false">
+		<content>
+			<Input placeholder="{i18n>order.number}" type="Text" showValueHelp="false" width="100%" valueHelpOnly="false" maxLength="0"
+				   value="{addOrderNumberModel>/orderid}"
+				   liveChange="handleOrderidChanged"
+				   valueState="{= ${addOrderNumberModel>/isOrderNumberValid} ? 'None' : 'Error'}"
+				   valueStateText="{addOrderNumberModel>/valueStateMsg}"/>
+		</content>
+		<beginButton/>
+		<buttons>
+			<Button text="{i18n>label.ok}" enabled="{addOrderNumberModel>/isOrderNumberValid}" type="Default" iconFirst="true" width="auto" iconDensityAware="false" press="handleAddOrderOKButtonPressed"/>
+			<Button text="{i18n>label.cancel}" type="Default" iconFirst="true" width="auto" iconDensityAware="false" press="handleAddOrderCancelButtonPressed"/>
+		</buttons>
+		<customHeader/>
+		<endButton/>
+		<subHeader/>
+	</Dialog>
+
+</core:FragmentDefinition>

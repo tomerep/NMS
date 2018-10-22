@@ -1,0 +1,106 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+
+	<form:FormContainer visible="{permissionsModel>/equipment_read}" expandable="true" expanded="true">
+		<form:title>
+			<core:Title text="{i18n>label.product.info}" level="Auto" icon="sap-icon://message-information"/>
+		</form:title>
+		<form:formElements>
+			<form:FormElement >
+				<form:label>
+					<Label text="{i18n>equi.manufacturer}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Text text="{equipmentDetailsModel>/data/Manufacturer}" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" />
+				</form:fields>
+			</form:FormElement>
+			<form:FormElement >
+				<form:label>
+					<Label text="{i18n>equi.product}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Text text="{equipmentDetailsModel>/data/ProductText}" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" />
+				</form:fields>
+			</form:FormElement>
+			<form:FormElement >
+				<form:label>
+					<Label text="{i18n>equi.ceid}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Text text="{equipmentDetailsModel>/data/CeId}" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" />
+				</form:fields>
+			</form:FormElement>
+			<form:FormElement >
+				<form:label>
+					<Label text="{i18n>equi.scope.application}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Text text="n.a." width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" />
+				</form:fields>
+			</form:FormElement>
+			<form:FormElement >
+				<form:label>
+					<Label text="{i18n>equi.manufacture.year}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Text text="{equipmentDetailsModel>/data/YearOfManufacture}" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" />
+				</form:fields>
+			</form:FormElement>
+			<form:FormElement >
+				<form:label>
+					<Label text="{i18n>order}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Text text="{equipmentDetailsModel>/data/OrderId}" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" />
+				</form:fields>
+			</form:FormElement>
+			<form:FormElement >
+				<form:label>
+					<Label text="{i18n>equi.door.number}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Text text="{equipmentDetailsModel>/data/DoorNo}" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" />
+				</form:fields>
+			</form:FormElement>
+			<form:FormElement >
+				<form:label>
+					<Label text="{i18n>equi.location}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Text text="{equipmentDetailsModel>/data/Location}" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" />
+				</form:fields>
+			</form:FormElement>
+			<form:FormElement >
+				<form:label>
+					<Label text="{i18n>order.position}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Text text="{equipmentDetailsModel>/data/OrderPosition}" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" />
+				</form:fields>
+			</form:FormElement>
+			<form:FormElement >
+				<form:label>
+					<Label text="{i18n>label.headquater}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Button text="+49 6227 747474" press="handlePhoneCallPress" icon="sap-icon://call"/>
+					<!-- <Link text="+49 6227 747474" textAlign="Begin" width="auto" press="handlePhoneCallPress" wrapping="false"
+						  emphasized="false" subtle="false"/> -->
+				</form:fields>
+			</form:FormElement>
+			<form:FormElement visible="{= ${permissionsModel>/read_configuration} }">
+				<form:label>
+					<Label text="{i18n>label.configuration}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+				</form:label>
+				<form:fields>
+					<Button text="{i18n>label.configuration}" press="handleConfigurationPress" icon="sap-icon://settings"/>
+					<!-- <Link text="{i18n>label.configuration}" textAlign="Begin" width="auto" press="handleConfigurationPress" wrapping="false"
+						  emphasized="false" subtle="false"/> -->
+				</form:fields>
+			</form:FormElement>
+		</form:formElements>
+	</form:FormContainer>
+
+</core:FragmentDefinition>

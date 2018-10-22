@@ -1,0 +1,467 @@
+[
+	{
+		"__metadata": {
+			"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.EquipmentType",
+			"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Equipment(Backend='E01',EquipmentId='11752852',Language='DE')"
+		},
+		"Backend": "E01",
+		"EquipmentId": "11752852",
+		"DoorNo": "01-UG",
+		"Location": "-",
+		"MaterialNo": "RDT0000302",
+		"Manufacturer": "Novoferm Riexinger Türenwerke GmbH",
+		"CeId": "153816486-1",
+		"YearOfManufacture": "2017",
+		"OrderPosition": "20",
+		"OrderId": "3784327",
+		"ProductText": "Feuerschutztüre Premio T30-2",
+		"Language": "DE",
+		"Configuration": "<!DOCTYPE html> <html> <head> <style> table {  border: 1px solid black; } th {    border: 1px solid black; text-align: left; background-color: Yellow; } td {    display: table-cell; text-align: left; } </style> </head> <body> <table> <tr><th>Ausstattung</th><th>Ausf&uuml;hrung</th></tr> <tr><td>Norm/Sonder.</td><td>Normlagergr&ouml;&szlig;e</td></tr> <tr><td>T&uuml;rmodell</td><td>Premio/ Dickfalz</td></tr> <tr><td>Zulassung</td><td>m i t  Zulassung</td></tr> <tr><td>Eigenschaften</td><td>Rauchdicht RS / S200</td></tr> <tr><td>Baurichtma&szlig;-Breite x H&ouml;he</td><td>2.000 MM X 2.000 MM</td></tr> <tr><td>Fl&uuml;gelteilung</td><td>mittig</td></tr> <tr><td>DIN-Richtung</td><td>rechts</td></tr> <tr><td>Blechdicke</td><td>1,00 mm</td></tr> <tr><td>Bandausf&uuml;hrung, 3-teilig</td><td>Stahl/Standard mit Bandsteckersicherung</td></tr> <tr><td>Bandart</td><td>T&uuml;r mit Null-D-Band</td></tr> <tr><td>Anzahl B&auml;nder pro Fl&uuml;gel</td><td>2</td></tr> <tr><td>Zargenart</td><td>Eckzarge</td></tr> <tr><td>Wandart</td><td>Mauerwerk</td></tr> <tr><td>Zargenteile</td><td>geschraubt</td></tr> <tr><td>Bodeneinstand</td><td>0 mm</td></tr> <tr><td>Zargenmontage mit</td><td>D&uuml;bellaschenpaketset zur verdeckten</td></tr> <tr><td></td><td>Montage in Sichtmauerwerk/Sichtbeton (f&uuml;r</td></tr> <tr><td></td><td>Anschweissmontage)</td></tr> <tr><td>Schwelle</td><td>A - fu&szlig;bodeneben</td></tr> <tr><td>Dichtschwelle</td><td>RS1 - absenkbare Bodendichtung</td></tr> <tr><td>Mittelfalzdichtung</td><td>mit Mittelfalzdichtung</td></tr> <tr><td>Einsteckschloss</td><td>BMH 1000 PZW/80 f. baus. PZ</td></tr> <tr><td>BMH-Stulp-Ausf&uuml;hrung</td><td>Stahl, verzinkt</td></tr> <tr><td>Standfl&uuml;gelverriegelung</td><td>Falztreibriegel (Verrieg. nur nach oben)</td></tr> <tr><td>Beschlag</td><td>Dr&uuml;ckergarnitur FSU-Form schwarz/ Kurzschild</td></tr> <tr><td>vorgerichtet f&uuml;r Beschlag</td><td>Kurzschild</td></tr> <tr><td>Dr&uuml;ckerh&ouml;he</td><td>1.050 mm</td></tr> <tr><td>T&uuml;rschlie&szlig;er Fabr.</td><td>GEZE f&uuml;r Geh. u. Standfl&uuml;gel</td></tr> <tr><td>T&uuml;rschlie&szlig;er Typ</td><td>GEZE TS 5000 ISM mit Gleitschiene u.</td></tr> <tr><td></td><td>integr. Schlie&szlig;folgeregelung</td></tr> <tr><td>T&uuml;rschlie&szlig;er - Farbe / Design</td><td>Standard silberfarbig</td></tr> <tr><td>Anordnung T&uuml;rschlie&szlig;er</td><td>auf Bandseite</td></tr> <tr><td>Montage</td><td>Schlosserm&auml;&szlig;ige Montage</td></tr> <tr><td>.</td><td>Verguss</td></tr> </table> </body> </html>",
+		"EquipmentOrderPosition": {
+			"results": [{
+				"__metadata": {
+					"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionType",
+					"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPosition(Backend='E01',OrderId='3784327',PositionNo='20')"
+				},
+				"Backend": "E01",
+				"OrderId": "3784327",
+				"PositionNo": "20",
+				"ShortText": "Feuerschutztüre Premio T30-2",
+				"InstallationOrderId": "1291249",
+				"LastModification": "/Date(1529020800000)/",
+				"AppliesTo": "T30-2",
+				"AdmissionNo": "Z-6.20-2205",
+				"Order": {
+					"__deferred": {
+						"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPosition(Backend='E01',OrderId='3784327',PositionNo='20')/Order"
+					}
+				},
+				"EquipmentSet": {
+					"__deferred": {
+						"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPosition(Backend='E01',OrderId='3784327',PositionNo='20')/EquipmentSet"
+					}
+				},
+				"OrderPositionOperationSet": {
+					"results": [{
+						"__metadata": {
+							"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionOperationType",
+							"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='3784327',OrderPositionNo='20',TypeOfServiceId='00')"
+						},
+						"Backend": "E01",
+						"OrderId": "3784327",
+						"OrderPositionNo": "20",
+						"TypeOfServiceId": "00",
+						"OperationId": "0010",
+						"OrderPosition": {
+							"__deferred": {
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='3784327',OrderPositionNo='20',TypeOfServiceId='00')/OrderPosition"
+							}
+						},
+						"ServiceType": {
+							"__metadata": {
+								"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.ServiceTypeType",
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/ServiceType(TypeOfServiceId='00',Language='DE')"
+							},
+							"TypeOfServiceId": "00",
+							"IsConfirmable": 1,
+							"Language": "DE",
+							"Text": "Schlossermäßige Montage"
+						},
+						"OrderPositionConfirmationSet": {
+							"results": [{
+								"__metadata": {
+									"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionConfirmationType",
+									"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0010',EquipmentId='11752852',Guid='b0dc4d2095744f64a0f3509c59f3ec2e')"
+								},
+								"Backend": "E01",
+								"OrderId": "3784327",
+								"OrderPositionNo": "20",
+								"OrderPositionOperationNo": "0010",
+								"EquipmentId": "11752852",
+								"Guid": "b0dc4d2095744f64a0f3509c59f3ec2e",
+								"ConfirmedAt": "/Date(1536651961182)/",
+								"MountingCompany": null,
+								"UserId": null,
+								"IsStorno": 1,
+								"IsConfirmationIntegrated": null,
+								"IsIntegrationError": null,
+								"OrderPosition": {
+									"__deferred": {
+										"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0010',EquipmentId='11752852',Guid='b0dc4d2095744f64a0f3509c59f3ec2e')/OrderPosition"
+									}
+								},
+								"OrderPositionOperation": {
+									"__deferred": {
+										"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0010',EquipmentId='11752852',Guid='b0dc4d2095744f64a0f3509c59f3ec2e')/OrderPositionOperation"
+									}
+								}
+							}]
+						}
+					}, {
+						"__metadata": {
+							"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionOperationType",
+							"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='3784327',OrderPositionNo='20',TypeOfServiceId='01')"
+						},
+						"Backend": "E01",
+						"OrderId": "3784327",
+						"OrderPositionNo": "20",
+						"TypeOfServiceId": "01",
+						"OperationId": "0020",
+						"OrderPosition": {
+							"__deferred": {
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='3784327',OrderPositionNo='20',TypeOfServiceId='01')/OrderPosition"
+							}
+						},
+						"ServiceType": {
+							"__metadata": {
+								"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.ServiceTypeType",
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/ServiceType(TypeOfServiceId='01',Language='DE')"
+							},
+							"TypeOfServiceId": "01",
+							"IsConfirmable": 1,
+							"Language": "DE",
+							"Text": "Beschlagsmontage"
+						},
+						"OrderPositionConfirmationSet": {
+							"results": [{
+								"__metadata": {
+									"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionConfirmationType",
+									"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0020',EquipmentId='11752852',Guid='39bd92a531bc48028804f3503dd50322')"
+								},
+								"Backend": "E01",
+								"OrderId": "3784327",
+								"OrderPositionNo": "20",
+								"OrderPositionOperationNo": "0020",
+								"EquipmentId": "11752852",
+								"Guid": "39bd92a531bc48028804f3503dd50322",
+								"ConfirmedAt": "/Date(1536651968294)/",
+								"MountingCompany": null,
+								"UserId": null,
+								"IsStorno": 1,
+								"IsConfirmationIntegrated": null,
+								"IsIntegrationError": null,
+								"OrderPosition": {
+									"__deferred": {
+										"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0020',EquipmentId='11752852',Guid='39bd92a531bc48028804f3503dd50322')/OrderPosition"
+									}
+								},
+								"OrderPositionOperation": {
+									"__deferred": {
+										"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0020',EquipmentId='11752852',Guid='39bd92a531bc48028804f3503dd50322')/OrderPositionOperation"
+									}
+								}
+							}]
+						}
+					}, {
+						"__metadata": {
+							"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionOperationType",
+							"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='3784327',OrderPositionNo='20',TypeOfServiceId='02')"
+						},
+						"Backend": "E01",
+						"OrderId": "3784327",
+						"OrderPositionNo": "20",
+						"TypeOfServiceId": "02",
+						"OperationId": "0030",
+						"OrderPosition": {
+							"__deferred": {
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='3784327',OrderPositionNo='20',TypeOfServiceId='02')/OrderPosition"
+							}
+						},
+						"ServiceType": {
+							"__metadata": {
+								"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.ServiceTypeType",
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/ServiceType(TypeOfServiceId='02',Language='DE')"
+							},
+							"TypeOfServiceId": "02",
+							"IsConfirmable": 1,
+							"Language": "DE",
+							"Text": "Verguss"
+						},
+						"OrderPositionConfirmationSet": {
+							"results": [{
+								"__metadata": {
+									"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionConfirmationType",
+									"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0030',EquipmentId='11752852',Guid='018cb94a08ee4f62ba95115da9a13e0f')"
+								},
+								"Backend": "E01",
+								"OrderId": "3784327",
+								"OrderPositionNo": "20",
+								"OrderPositionOperationNo": "0030",
+								"EquipmentId": "11752852",
+								"Guid": "018cb94a08ee4f62ba95115da9a13e0f",
+								"ConfirmedAt": "/Date(1536575329396)/",
+								"MountingCompany": null,
+								"UserId": null,
+								"IsStorno": 0,
+								"IsConfirmationIntegrated": null,
+								"IsIntegrationError": null,
+								"OrderPosition": {
+									"__deferred": {
+										"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0030',EquipmentId='11752852',Guid='018cb94a08ee4f62ba95115da9a13e0f')/OrderPosition"
+									}
+								},
+								"OrderPositionOperation": {
+									"__deferred": {
+										"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0030',EquipmentId='11752852',Guid='018cb94a08ee4f62ba95115da9a13e0f')/OrderPositionOperation"
+									}
+								}
+							}]
+						}
+					}, {
+						"__metadata": {
+							"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionOperationType",
+							"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='3784327',OrderPositionNo='20',TypeOfServiceId='08')"
+						},
+						"Backend": "E01",
+						"OrderId": "3784327",
+						"OrderPositionNo": "20",
+						"TypeOfServiceId": "08",
+						"OperationId": "0040",
+						"OrderPosition": {
+							"__deferred": {
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='3784327',OrderPositionNo='20',TypeOfServiceId='08')/OrderPosition"
+							}
+						},
+						"ServiceType": {
+							"__metadata": {
+								"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.ServiceTypeType",
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/ServiceType(TypeOfServiceId='08',Language='DE')"
+							},
+							"TypeOfServiceId": "08",
+							"IsConfirmable": 1,
+							"Language": "DE",
+							"Text": "Abnahme"
+						},
+						"OrderPositionConfirmationSet": {
+							"results": [{
+								"__metadata": {
+									"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionConfirmationType",
+									"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0040',EquipmentId='11752852',Guid='1e81d434bef44aeaa9dc015ca72de8c1')"
+								},
+								"Backend": "E01",
+								"OrderId": "3784327",
+								"OrderPositionNo": "20",
+								"OrderPositionOperationNo": "0040",
+								"EquipmentId": "11752852",
+								"Guid": "1e81d434bef44aeaa9dc015ca72de8c1",
+								"ConfirmedAt": "/Date(1536651820314)/",
+								"MountingCompany": null,
+								"UserId": null,
+								"IsStorno": 1,
+								"IsConfirmationIntegrated": null,
+								"IsIntegrationError": null,
+								"OrderPosition": {
+									"__deferred": {
+										"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0040',EquipmentId='11752852',Guid='1e81d434bef44aeaa9dc015ca72de8c1')/OrderPosition"
+									}
+								},
+								"OrderPositionOperation": {
+									"__deferred": {
+										"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='3784327',OrderPositionNo='20',OrderPositionOperationNo='0040',EquipmentId='11752852',Guid='1e81d434bef44aeaa9dc015ca72de8c1')/OrderPositionOperation"
+									}
+								}
+							}]
+						}
+					}]
+				},
+				"OrderPositionConfirmationSet": {
+					"__deferred": {
+						"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPosition(Backend='E01',OrderId='3784327',PositionNo='20')/OrderPositionConfirmationSet"
+					}
+				}
+			}]
+		}
+	},
+	{
+		"__metadata": {
+			"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.EquipmentType",
+			"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/Equipment(Backend='E01',EquipmentId='11953651',Language='DE')"
+		},
+		"Backend": "E01",
+		"EquipmentId": "11953651",
+		"DoorNo": "031 / T-U. 17-1-S",
+		"Location": "BMZ/UG",
+		"MaterialNo": "RDT0000301",
+		"Manufacturer": "Novoferm Riexinger Türenwerke GmbH",
+		"CeId": "154095184-1",
+		"YearOfManufacture": "2018",
+		"OrderPosition": "20",
+		"OrderId": "5003402",
+		"ProductText": "Feuerschutztüre Premio T30-1",
+		"Language": "DE",
+		"Configuration": null,
+		"EquipmentOrderPosition": {
+			"results": [{
+				"__metadata": {
+					"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionType",
+					"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPosition(Backend='E01',OrderId='5003402',PositionNo='20')"
+				},
+				"Backend": "E01",
+				"OrderId": "5003402",
+				"PositionNo": "20",
+				"ShortText": "Feuerschutztüre Premio T30-1",
+				"InstallationOrderId": "1308825",
+				"LastModification": "/Date(1521072000000)/",
+				"AppliesTo": "T30-1",
+				"AdmissionNo": "Z-6.20-2205",
+				"Order": {
+					"__deferred": {
+						"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPosition(Backend='E01',OrderId='5003402',PositionNo='20')/Order"
+					}
+				},
+				"EquipmentSet": {
+					"__deferred": {
+						"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPosition(Backend='E01',OrderId='5003402',PositionNo='20')/EquipmentSet"
+					}
+				},
+				"OrderPositionOperationSet": {
+					"results": [{
+						"__metadata": {
+							"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionOperationType",
+							"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='5003402',OrderPositionNo='20',TypeOfServiceId='00')"
+						},
+						"Backend": "E01",
+						"OrderId": "5003402",
+						"OrderPositionNo": "20",
+						"TypeOfServiceId": "00",
+						"OperationId": "0010",
+						"OrderPosition": {
+							"__deferred": {
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='5003402',OrderPositionNo='20',TypeOfServiceId='00')/OrderPosition"
+							}
+						},
+						"ServiceType": {
+							"__metadata": {
+								"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.ServiceTypeType",
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/ServiceType(TypeOfServiceId='00',Language='DE')"
+							},
+							"TypeOfServiceId": "00",
+							"IsConfirmable": 1,
+							"Language": "DE",
+							"Text": "Schlossermäßige Montage"
+						},
+						"OrderPositionConfirmationSet": {
+							"results": []
+						}
+					}, {
+						"__metadata": {
+							"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionOperationType",
+							"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='5003402',OrderPositionNo='20',TypeOfServiceId='01')"
+						},
+						"Backend": "E01",
+						"OrderId": "5003402",
+						"OrderPositionNo": "20",
+						"TypeOfServiceId": "01",
+						"OperationId": "0020",
+						"OrderPosition": {
+							"__deferred": {
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='5003402',OrderPositionNo='20',TypeOfServiceId='01')/OrderPosition"
+							}
+						},
+						"ServiceType": {
+							"__metadata": {
+								"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.ServiceTypeType",
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/ServiceType(TypeOfServiceId='01',Language='DE')"
+							},
+							"TypeOfServiceId": "01",
+							"IsConfirmable": 1,
+							"Language": "DE",
+							"Text": "Beschlagsmontage"
+						},
+						"OrderPositionConfirmationSet": {
+							"results": [{
+								"__metadata": {
+									"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionConfirmationType",
+									"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='5003402',OrderPositionNo='20',OrderPositionOperationNo='0020',EquipmentId='11953651',Guid='efa1adb87d8d4ca8b2566b2033217c63')"
+								},
+								"Backend": "E01",
+								"OrderId": "5003402",
+								"OrderPositionNo": "20",
+								"OrderPositionOperationNo": "0020",
+								"EquipmentId": "11953651",
+								"Guid": "efa1adb87d8d4ca8b2566b2033217c63",
+								"ConfirmedAt": "/Date(1536163055827)/",
+								"MountingCompany": null,
+								"UserId": null,
+								"IsStorno": null,
+								"IsConfirmationIntegrated": null,
+								"IsIntegrationError": null,
+								"OrderPosition": {
+									"__deferred": {
+										"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='5003402',OrderPositionNo='20',OrderPositionOperationNo='0020',EquipmentId='11953651',Guid='efa1adb87d8d4ca8b2566b2033217c63')/OrderPosition"
+									}
+								},
+								"OrderPositionOperation": {
+									"__deferred": {
+										"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionConfirmation(Backend='E01',OrderId='5003402',OrderPositionNo='20',OrderPositionOperationNo='0020',EquipmentId='11953651',Guid='efa1adb87d8d4ca8b2566b2033217c63')/OrderPositionOperation"
+									}
+								}
+							}]
+						}
+					}, {
+						"__metadata": {
+							"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionOperationType",
+							"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='5003402',OrderPositionNo='20',TypeOfServiceId='02')"
+						},
+						"Backend": "E01",
+						"OrderId": "5003402",
+						"OrderPositionNo": "20",
+						"TypeOfServiceId": "02",
+						"OperationId": "0030",
+						"OrderPosition": {
+							"__deferred": {
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='5003402',OrderPositionNo='20',TypeOfServiceId='02')/OrderPosition"
+							}
+						},
+						"ServiceType": {
+							"__metadata": {
+								"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.ServiceTypeType",
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/ServiceType(TypeOfServiceId='02',Language='DE')"
+							},
+							"TypeOfServiceId": "02",
+							"IsConfirmable": 1,
+							"Language": "DE",
+							"Text": "Verguss"
+						},
+						"OrderPositionConfirmationSet": {
+							"results": []
+						}
+					}, {
+						"__metadata": {
+							"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.OrderPositionOperationType",
+							"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='5003402',OrderPositionNo='20',TypeOfServiceId='08')"
+						},
+						"Backend": "E01",
+						"OrderId": "5003402",
+						"OrderPositionNo": "20",
+						"TypeOfServiceId": "08",
+						"OperationId": "0040",
+						"OrderPosition": {
+							"__deferred": {
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPositionOperation(Backend='E01',OrderId='5003402',OrderPositionNo='20',TypeOfServiceId='08')/OrderPosition"
+							}
+						},
+						"ServiceType": {
+							"__metadata": {
+								"type": "com.axians.itsolutions.ui5.novoferm.database.nfad.Service.ServiceTypeType",
+								"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/ServiceType(TypeOfServiceId='08',Language='DE')"
+							},
+							"TypeOfServiceId": "08",
+							"IsConfirmable": 1,
+							"Language": "DE",
+							"Text": "Abnahme"
+						},
+						"OrderPositionConfirmationSet": {
+							"results": []
+						}
+					}]
+				},
+				"OrderPositionConfirmationSet": {
+					"__deferred": {
+						"uri": "https://e4qrafb09301a.hana.ondemand.com:443/com/axians/itsolutions/ui5/novoferm/database/nfad/Service.xsodata/OrderPosition(Backend='E01',OrderId='5003402',PositionNo='20')/OrderPositionConfirmationSet"
+					}
+				}
+			}]
+		}
+	}
+]

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema Namespace="Z_MOB_DATA_EXCHG_SRV" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="BackendCode">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="Counter" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="Counter" Type="Edm.Int32" Nullable="false" />
+                <Property Name="TypeOfId" Type="Edm.String" MaxLength="10" />
+                <Property Name="Prefix" Type="Edm.String" MaxLength="10" />
+                <Property Name="Suffix" Type="Edm.String" MaxLength="10" />
+            </EntityType>
+			<EntityType Name="CustomerOrderType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="OrderId" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="OrderId" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="PartnerAddress" Type="Edm.String" MaxLength="2000" />
+                <Property Name="PartnerAddressShort" Type="Edm.String" MaxLength="200" />
+                <Property Name="HasFinalInvoice" Type="Edm.Byte" />
+                <Property Name="IsStarted" Type="Edm.Byte" />
+                <Property Name="SalesOrganization" Type="Edm.String" MaxLength="20" />
+                <Property Name="DistributionChannel" Type="Edm.String" MaxLength="20" />
+                <Property Name="LastModification" Type="Edm.DateTime" />
+                <Property Name="ApprovedAt" Type="Edm.DateTime" />
+                <Property Name="WarrentyEnd" Type="Edm.DateTime" />
+                <Property Name="FinalInvoiceDate" Type="Edm.DateTime" />
+            </EntityType>
+            <EntityType Name="OrderPartnerType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="OrderFk" />
+                    <PropertyRef Name="InternalPersonFk" />
+                    <PropertyRef Name="PartnerFunction" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="OrderFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="InternalPersonFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="PartnerFunction" Type="Edm.String" Nullable="false" MaxLength="10" />
+            </EntityType>
+            <EntityType Name="OrderBlPartnerType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="OrderFk" />
+                    <PropertyRef Name="PartnerNo" />
+                    <PropertyRef Name="Role" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="OrderFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="PartnerNo" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="Role" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="Name" Type="Edm.String" MaxLength="200" />
+                <Property Name="LandLineDisplay" Type="Edm.String" MaxLength="50" />
+                <Property Name="LandLineDial" Type="Edm.String" MaxLength="50" />
+                <Property Name="MobileDisplay" Type="Edm.String" MaxLength="50" />
+                <Property Name="MobileDial" Type="Edm.String" MaxLength="50" />
+                <Property Name="MailAddress" Type="Edm.String" MaxLength="256" />
+            </EntityType>
+            <EntityType Name="OrderSubPartnerType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="OrderFk" />
+                    <PropertyRef Name="MountingCompanyFk" />
+                    <PropertyRef Name="PartnerRole" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="OrderFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="MountingCompanyFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="PartnerRole" Type="Edm.String" Nullable="false" MaxLength="10" />
+            </EntityType>
+            <EntityType Name="OrderPositionType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="OrderFk" />
+                    <PropertyRef Name="PositionNo" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="OrderFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="PositionNo" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="ShortText" Type="Edm.String" MaxLength="100" />
+                <Property Name="InstallationOrderId" Type="Edm.String" MaxLength="20" />
+                <Property Name="LastModification" Type="Edm.DateTime" />
+                <Property Name="AppliesTo" Type="Edm.String" MaxLength="50" />
+                <Property Name="AdmissionNo" Type="Edm.String" MaxLength="50" />
+            </EntityType>
+            <EntityType Name="OrderPositionTextType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="OrderFk" />
+                    <PropertyRef Name="OrderPositionFk" />
+                    <PropertyRef Name="Language" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="OrderFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="OrderPositionFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" />
+                <Property Name="Configuration" Type="Edm.String" MaxLength="2147483647" />
+                <Property Name="ShortText" Type="Edm.String" MaxLength="100" />
+            </EntityType>
+            <EntityType Name="OrderPositionOperationType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="OrderFk" />
+                    <PropertyRef Name="OrderPositionFk" />
+                    <PropertyRef Name="OperationId" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="OrderFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="OrderPositionFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="OperationId" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="TypeOfServiceId" Type="Edm.String" Nullable="false" MaxLength="20" />
+            </EntityType>
+            <EntityType Name="OrderPositionOperationInvoiceType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="EquipmentFk" />
+                    <PropertyRef Name="TypeOfServiceFk" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="EquipmentFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="TypeOfServiceFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="IsInvoiced" Type="Edm.Byte" />
+                <Property Name="InvoicedBy" Type="Edm.String" MaxLength="50" />
+                <Property Name="InvoicedWhen" Type="Edm.DateTime" />
+                <Property Name="InvoiceCompanyFk" Type="Edm.String" MaxLength="20" />
+            </EntityType>
+            <EntityType Name="OrderPositionEquipmentType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="OrderFk" />
+                    <PropertyRef Name="OrderPositionFk" />
+                    <PropertyRef Name="EquipmentFk" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="OrderFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="OrderPositionFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="EquipmentFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+            </EntityType>
+            <EntityType Name="OrderPositionDocumentType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="OrderFk" />
+                    <PropertyRef Name="OrderPositionFk" />
+                    <PropertyRef Name="KindOfDocument" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="OrderFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="OrderPositionFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="KindOfDocument" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="Url" Type="Edm.String" MaxLength="2000" />
+            </EntityType>
+            <EntityType Name="EquipmentType">
+                <Key>
+                    <PropertyRef Name="BackendFk" />
+                    <PropertyRef Name="EquipmentId" />
+                </Key>
+                <Property Name="BackendFk" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="EquipmentId" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="DoorNo" Type="Edm.String" MaxLength="50" />
+                <Property Name="Location" Type="Edm.String" MaxLength="50" />
+                <Property Name="MaterialNo" Type="Edm.String" MaxLength="20" />
+                <Property Name="Manufacturer" Type="Edm.String" MaxLength="100" />
+                <Property Name="CeId" Type="Edm.String" MaxLength="50" />
+                <Property Name="YearOfManufacture" Type="Edm.String" MaxLength="4" />
+            </EntityType>
+            <EntityType Name="ProductType">
+                <Key>
+                    <PropertyRef Name="MaterialNo" />
+                </Key>
+                <Property Name="MaterialNo" Type="Edm.String" Nullable="false" MaxLength="20" />
+            </EntityType>
+            <EntityType Name="ProductTextType">
+                <Key>
+                    <PropertyRef Name="MaterialFk" />
+                    <PropertyRef Name="Language" />
+                </Key>
+                <Property Name="MaterialFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" />
+                <Property Name="Text" Type="Edm.String" MaxLength="200" />
+            </EntityType>
+            <EntityType Name="ProductDocumentType">
+                <Key>
+                    <PropertyRef Name="MaterialFk" />
+                    <PropertyRef Name="DocumentType" />
+                    <PropertyRef Name="Language" />
+                </Key>
+                <Property Name="MaterialFk" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="DocumentType" Type="Edm.String" Nullable="false" MaxLength="20" />
+                <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" />
+                <Property Name="Url" Type="Edm.String" MaxLength="2000" />
+            </EntityType>
+
+            <EntityContainer Name="PI" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="BackendCodeSet" EntityType="Z_MOB_DATA_EXCHG_SRV.BackendCode" />
+                <EntitySet Name="CustomerOrder" EntityType="Z_MOB_DATA_EXCHG_SRV.CustomerOrderType" />
+                <EntitySet Name="OrderPartner" EntityType="Z_MOB_DATA_EXCHG_SRV.OrderPartnerType" />
+                <EntitySet Name="OrderBlPartner" EntityType="Z_MOB_DATA_EXCHG_SRV.OrderBlPartnerType" />
+                <EntitySet Name="OrderSubPartner" EntityType="Z_MOB_DATA_EXCHG_SRV.OrderSubPartnerType" />
+                <EntitySet Name="OrderPosition" EntityType="Z_MOB_DATA_EXCHG_SRV.OrderPositionType" />
+                <EntitySet Name="OrderPositionText" EntityType="Z_MOB_DATA_EXCHG_SRV.OrderPositionTextType" />
+                <EntitySet Name="OrderPositionOperation" EntityType="Z_MOB_DATA_EXCHG_SRV.OrderPositionOperationType" />
+                <EntitySet Name="OrderPositionOperationInvoice" EntityType="Z_MOB_DATA_EXCHG_SRV.OrderPositionOperationInvoiceType" />
+                <EntitySet Name="OrderPositionEquipment" EntityType="Z_MOB_DATA_EXCHG_SRV.OrderPositionEquipmentType" />
+                <EntitySet Name="OrderPositionDocument" EntityType="Z_MOB_DATA_EXCHG_SRV.OrderPositionDocumentType" />
+                <EntitySet Name="Equipment" EntityType="Z_MOB_DATA_EXCHG_SRV.EquipmentType" />
+                <EntitySet Name="Product" EntityType="Z_MOB_DATA_EXCHG_SRV.ProductType" />
+                <EntitySet Name="ProductText" EntityType="Z_MOB_DATA_EXCHG_SRV.ProductTextType" />
+                <EntitySet Name="ProductDocument" EntityType="Z_MOB_DATA_EXCHG_SRV.ProductDocumentType" />
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

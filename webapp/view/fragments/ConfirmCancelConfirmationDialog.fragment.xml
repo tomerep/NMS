@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+
+	<Dialog horizontalScrolling="false" showHeader="true" state="None" stretch="false" title="{i18n>order.cancellation.confirm.title}" type="Standard"
+			verticalScrolling="false">
+		<content>
+			<Text text="{i18n>order.quest.cancellation}" width="auto" maxLines="3" wrapping="true" textAlign="Begin"
+				  textDirection="Inherit" />
+		</content>
+		<beginButton/>
+		<buttons>
+			<Button text="{i18n>label.yes}" type="Default" iconFirst="true" width="auto"   iconDensityAware="false" press="handleConfirmCancellationButtonPressed"/>
+			<Button text="{i18n>label.no}" type="Default" iconFirst="true" width="auto"   iconDensityAware="false" press="handleDeclineCancellationButtonPressed"/>
+		</buttons>
+		<customHeader/>
+		<endButton/>
+		<subHeader/>
+	</Dialog>
+
+</core:FragmentDefinition>

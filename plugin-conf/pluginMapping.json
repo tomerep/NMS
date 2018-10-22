@@ -1,0 +1,15 @@
+{
+	"cordova": {
+		"network": "cordova-plugin-network-information@2.0.1",
+		"splashscreen": "cordova-plugin-splashscreen@3.2.2",
+		"barcodescanner":"cordova-plugin-barcodescanner@0.7.4",
+		"callNumber": "cordova-plugin-call-number@1.0.1",
+		"camera": "cordova-plugin-camera@4.0.3",
+		"camera-permission": "cordova-plugin-ios-camera-permissions@1.2.0",
+		"customconfig": "cordova-custom-config@5.0.2"
+	},
+	"kapsel": [
+
+	],
+	"custom": []
+}

@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+
+	<Dialog horizontalScrolling="false" icon="sap-icon://edit" showHeader="true" state="None" stretch="true"
+		title="{i18n>label.configuration.title}" type="Standard" verticalScrolling="true" contentWidth="96%" contentHeight="96%" stretchOnPhone="true">
+		<content>
+			<core:HTML content="{ConfigurationHtml>/html}"/>
+		</content>
+		<beginButton/>
+		<buttons>
+			<Button text="{i18n>label.ok}" type="Default" iconFirst="true" width="auto"  iconDensityAware="false" press="handleCloseHtmlDialog"/>
+		</buttons>
+		<customHeader/>
+		<endButton/>
+		<subHeader/>
+	</Dialog>
+
+</core:FragmentDefinition>

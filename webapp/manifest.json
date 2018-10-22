@@ -1,0 +1,186 @@
+{
+	"_version": "1.8.0",
+	"_buildProfile": "@@appProfile",
+	"_buildDate": "@@buildDate",
+	"_commit": "@@commit",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "com.sap.build.axians.novofermMobil",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"urls": {
+			"serviceUrlPrefix": "/com/axians/itsolutions/ui5/novoferm/database/anonymous/",
+			"serviceUrlSuffix": "Service.xsodata",
+			"serviceUrlAnonymousSuffix": "Anonymous.xsodata",
+			"roleServiceUrlSuffix": "base/RoleService.xsjs"
+		},
+		"dataSources": {
+			"mainService": {
+				"type": "OData",
+				"uri": "https://e4qrafb09301a.hana.ondemand.com/com/axians/itsolutions/ui5/novoferm/database/anonymous/Anonymous.xsodata"
+			}
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"ach": "ach",
+		"resources": "resources.json",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		},
+		"offline_database": {
+			"name": "com.sap.build.axians.novofermMobil.offline_db",
+			"version": 1
+		},
+		"storageUtils": {
+			"storageId": "com.sap.build.axians.novofermMobil"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "com.sap.build.axians.novofermMobil.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"anonymous": {
+				"dataSource": "mainService",
+				"settings": {
+					"defaultBindingMode": "TwoWay"
+				}
+			}
+		},
+		"resources": {
+			"css": []
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.axians.novofermMobil.view",
+				"controlId": "App",
+				"clearTarget": false,
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": [
+						"MainView"
+					]
+				},
+				"async": true
+			},
+			"targets": {
+				"MainView": {
+					"controlAggregation": "pages",
+					"targetParent": "App",
+					"controlId": "App",
+					"viewName": "MainView",
+					"viewId": "MainView",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"OrderList": {
+					"controlAggregation": "pages",
+					"targetParent": "App",
+					"controlId": "App",
+					"viewName": "OrderList",
+					"viewId": "OrderList",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"EquiList": {
+					"controlAggregation": "pages",
+					"targetParent": "App",
+					"controlId": "App",
+					"viewName": "EquiList",
+					"viewId": "EquiList",
+					"viewLevel": 3,
+					"transition": "slide"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "MainView/:context:",
+					"name": "MainView",
+					"targetControl": "App",
+					"targetAggregation": "pages",
+					"target": [
+						"MainView"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "default",
+					"targetControl": "App",
+					"targetAggregation": "pages",
+					"target": [
+						"MainView"
+					]
+				},
+				{
+					"pattern": "OrderList",
+					"name": "OrderList",
+					"targetControl": "App",
+					"targetAggregation": "pages",
+					"target": [
+						"OrderList"
+					]
+				},
+				{
+					"pattern": "EquiList/{orderid}",
+					"name": "EquiList",
+					"targetControl": "App",
+					"targetAggregation": "pages",
+					"target": [
+						"EquiList"
+					]
+				}
+			]
+		}
+	},
+	"sap.mobile": {
+		"logon": {
+			"mainService": {
+				"development" : {
+					"serverHost": "https://e4qrafb09301a.hana.ondemand.com",
+					"onlineAppUrl": "DUMMY"
+				}
+			}
+		}
+	}
+}

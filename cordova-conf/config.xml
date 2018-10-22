@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		id="@@cordovaAppId"
+		version="@@cordovaAppVersion">
+
+	<name>@@cordovaAppName</name>
+	<description>@@cordovaAppDescription</description>
+	<author>Axians IT Solutions</author>
+	<content src="@@cordovaContentSource"/>
+
+	<access origin="*"/>
+
+	<platform name="android">
+		<preference name="android-minSdkVersion" value="16"/>
+		<preference name="android-targetSdkVersion" value="26"/>
+
+		<icon src="www/img/android/mipmap-mdpi/ic_launcher_foreground.png" density="mdpi"/>
+		<icon src="www/img/android/mipmap-hdpi/ic_launcher_foreground.png" density="hdpi"/>
+		<icon src="www/img/android/mipmap-xhdpi/ic_launcher_foreground.png" density="xhdpi"/>
+		<icon src="www/img/android/mipmap-xxhdpi/ic_launcher_foreground.png" density="xxhdpi"/>
+		<icon src="www/img/android/mipmap-xxxhdpi/ic_launcher_foreground.png" density="xxxhdpi"/>
+
+
+		<config-file target="AndroidManifest.xml" parent="/*" mode="merge">
+    		<uses-permission android:name="android.permission.CAMERA" />
+    		<uses-feature android:name="android.hardware.camera" />
+    		<uses-feature android:name="android.hardware.camera.autofocus" />
+		</config-file>
+
+		<!--<preference name="android-maxSdkVersion" value="15" />-->
+		<!--<preference name="android-targetSdkVersion" value="12" />-->
+	</platform>
+
+	<platform name="ios">
+		<!-- ENABLE_BITCODE to YES in Xcode project file and override NO value in /ios/cordova/build.xcconfig -->
+		<preference name="ios-XCBuildConfiguration-ENABLE_BITCODE" value="NO"/>
+		<preference name="StatusBarOverlaysWebView" value="false"/>
+		<preference name="target-device" value="universal"/>
+
+		<icon src="www/img/ios/icon-60@2x.png" width="120" height="120" />
+		<icon src="www/img/ios/icon-60@3x.png" width="180" height="180" />
+		<icon src="www/img/ios/icon-76.png" width="76" height="76" />
+		<icon src="www/img/ios/icon-76@2x.png" width="152" height="152" />
+		<icon src="www/img/ios/Icon-83.5@2x.png" width="167" height="167" />
+		<icon src="www/img/ios/Icon-Small.png" width="29" height="29" />
+		<icon src="www/img/ios/Icon-Small@2x.png" width="58" height="58" />
+		<icon src="www/img/ios/Icon-Small@3x.png" width="87" height="87" />
+		<icon src="www/img/ios/Icon-Small-40.png" width="40" height="40" />
+		<icon src="www/img/ios/Icon-Small-40@2x.png" width="80" height="80" />
+		<icon src="www/img/ios/Icon-Small-40@3x.png" width="120" height="120" />
+
+		<custom-config-file target="*-Info.plist" platform="ios" parent="NSCameraUsageDescription">
+			<string>Camera</string>
+		</custom-config-file>
+
+	</platform>
+
+	<platform name="windows">
+		<preference name="SplashScreenBackgroundColor" value="0xFFFFFFFF"/>
+		<preference name="windows-appx-target" value="uap"/>
+		<preference name="WindowsStorePublisherName" value="Axians IT Solutions"/>
+		<preference name="windows-target-version" value="10.0"/>
+	</platform>
+</widget>
